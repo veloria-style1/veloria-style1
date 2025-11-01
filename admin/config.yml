@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: veloria-style/veloria-style.github.io
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://veloria-style.github.io
+
+collections:
+  - name: "pages"
+    label: "صفحات سایت"
+    files:
+      - file: "index.html"
+        label: "صفحه اصلی"
+        name: "index"
+        fields:
+          - { label: "عنوان اصلی", name: "title", widget: "string" }
+          - { label: "متن معرفی", name: "intro", widget: "text" }
+
+  - name: "products"
+    label: "محصولات"
+    folder: "products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "نام محصول", name: "title", widget: "string" }
+      - { label: "توضیحات", name: "description", widget: "text" }
+      - { label: "قیمت", name: "price", widget: "string" }
+      - { label: "عکس محصول", name: "image", widget: "image" }
