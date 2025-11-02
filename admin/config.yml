@@ -7,3 +7,15 @@ public_folder: "/images/uploads"
 
 site_url: https://veloria-style1.netlify.app
 display_url: https://veloria-style1.netlify.app
+
+collections:
+  - name: "products"
+    label: "محصولات"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "عنوان محصول", name: "title", widget: "string" }
+      - { label: "توضیحات", name: "body", widget: "text" }
+      - { label: "تصویر", name: "image", widget: "image" }
+      - { label: "قیمت", name: "price", widget: "number" }
